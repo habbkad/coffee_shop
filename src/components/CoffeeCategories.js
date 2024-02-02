@@ -10,7 +10,7 @@ import {
 } from "@expo/vector-icons";
 import CoffeComponent from "./CoffeComponent";
 
-const CoffeeCategories = () => {
+const CoffeeCategories = ({ navigation }) => {
   const data = [0, 1, 2, 3, 4];
   return (
     <Box mt={6}>
@@ -54,7 +54,7 @@ const CoffeeCategories = () => {
         data={data}
         numColumns={2}
         renderItem={(item) => {
-          return <CoffeComponent />;
+          return <CoffeComponent navigation={navigation} />;
         }}
       />
     </Box>

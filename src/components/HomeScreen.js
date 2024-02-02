@@ -4,7 +4,7 @@ import { Text, Box, Avatar, Input, Icon } from "native-base";
 import { Ionicons, Feather, Entypo } from "@expo/vector-icons";
 import CoffeeCategories from "./CoffeeCategories";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <Box px={0}>
       <Box
@@ -72,7 +72,7 @@ const HomeScreen = () => {
           }
         />
       </Box>
-      <CoffeeCategories />
+      <CoffeeCategories navigation={navigation} />
     </Box>
   );
 };

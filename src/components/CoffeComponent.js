@@ -1,11 +1,12 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
-import { Text, VStack, Image, Box, Center, Icon } from "native-base";
+import { Text, VStack, Image, Box, Center, Icon, Pressable } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
-const CoffeComponent = () => {
+const CoffeComponent = ({ navigation }) => {
   return (
     <Box mt={5} ml={3}>
-      <Box
+      <Pressable
+        onPress={() => navigation.navigate("Details")}
         border="1"
         w={"180px"}
         borderRadius="xl"
@@ -46,7 +47,7 @@ const CoffeComponent = () => {
             />
           </Box>
         </Box>
-      </Box>
+      </Pressable>
     </Box>
   );
 };
