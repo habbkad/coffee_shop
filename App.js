@@ -10,16 +10,20 @@ import {
   useColorModeValue,
   extendTheme,
 } from "native-base";
+import store from "./src/redux/store";
 import Router from "./src/routes/Router";
+import { Provider } from "react-redux";
 
 export default function App() {
   const { colors } = useTheme();
   return (
-    <NativeBaseProvider>
-      <Box h={"100%"}>
-        <Router />
-      </Box>
-    </NativeBaseProvider>
+    <Provider store={store}>
+      <NativeBaseProvider>
+        <Box h={"100%"}>
+          <Router />
+        </Box>
+      </NativeBaseProvider>
+    </Provider>
   );
 }
 

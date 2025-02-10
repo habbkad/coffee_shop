@@ -2,11 +2,12 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import { Text, VStack, Image, Box, Center, Icon, Pressable } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
-const CoffeComponent = ({ navigation }) => {
+const CoffeComponent = ({ navigation, item }) => {
+  console.log(item);
   return (
     <Box mt={5} ml={3}>
       <Pressable
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => navigation.navigate("Details", { data: item })}
         border="1"
         w={"180px"}
         borderRadius="xl"
@@ -18,7 +19,7 @@ const CoffeComponent = ({ navigation }) => {
           <Image
             borderRadius={15}
             source={{
-              uri: "https://img.freepik.com/free-photo/cup-coffee-with-heart-drawn-foam_1286-70.jpg?1&w=1480&t=st=1706805301~exp=1706805901~hmac=aa0c4cd308365042db510c43eae99b2d45baf6bd3225a8da4ef9ee89ac20064d",
+              uri: item.item.image,
             }}
             alt="Alternate Text"
             h={122}
@@ -29,7 +30,7 @@ const CoffeComponent = ({ navigation }) => {
         <Box display={"flex"} flexDir={"row"} pb={1}>
           <Box mx={2} w={"60%"}>
             <Text color={"lightText"} fontSize={"xl"}>
-              Cappacino
+              {item.item.name}
             </Text>
             <Text fontSize={"9px"} color={"lightText"}>
               With Chocolate

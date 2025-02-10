@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MyTabs from "./BottomTabs";
 import HomeScreen from "../components/HomeScreen";
 import Details from "../screens/Details";
+import Checkout from "../screens/Checkout";
 // const MyTheme = {
 //   dark: true,
 //   colors: {
@@ -30,6 +31,7 @@ function Router() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Tabs" component={MyTabs} />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Checkout" component={Checkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
         display={"flex"}
         flexDirection={"row"}
         justifyContent={"space-between"}
-        pl={5}
+        pl={2}
         alignItems={"center"}
       >
         <Avatar
@@ -19,7 +19,7 @@ const HomeScreen = ({ navigation }) => {
           alignSelf="left"
           size="lg"
           source={{
-            uri: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            uri: "https://i.pinimg.com/564x/ad/d2/bb/add2bbc8671e8158d0442b99c8153276.jpg",
           }}
         >
           RS
@@ -32,7 +32,7 @@ const HomeScreen = ({ navigation }) => {
             ml={1}
             fontWeight={"semibold"}
           >
-            Bintara, Bekasi
+            East Legon, Accra
           </Text>
         </Box>
 
@@ -42,8 +42,13 @@ const HomeScreen = ({ navigation }) => {
         <Text color={"lightText"} fontSize={"2xl"} fontWeight={"semibold"}>
           Good morning,
         </Text>
-        <Text color={"lightText"} fontSize={"2xl"} fontWeight={"semibold"}>
-          Dityo
+        <Text
+          color={"lightText"}
+          fontSize={"2xl"}
+          fontWeight={"normal"}
+          fontStyle={"italic"}
+        >
+          Coffe lovers
         </Text>
       </Box>
       <Box mt={6}>
